@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import FormInput from './../../components/form-input/form-input.component';
-import './sign-up-form.styles.scss';
+import { SignUpContainer } from './sign-up-form.styles';
 import Button from './../button/button.component';
 import {
   createAuthUserWithEmailAndPassword,
@@ -12,15 +12,15 @@ const defaultFormFields = {
   email: '',
   password: '',
   confirmPassword: '',
-}; 
+};
 
 const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
 
   const { displayName, email, password, confirmPassword } = formFields;
-//   const {setCurrentUser} = useContext(UserContext);
+  //   const {setCurrentUser} = useContext(UserContext);
   console.log(formFields);
- 
+
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   };
@@ -41,7 +41,7 @@ const SignUpForm = () => {
         email,
         password
       );
-    //   setCurrentUser(user)
+      //   setCurrentUser(user)
       await createUserDocumentFromAuth(user, { displayName });
       resetFormFields();
     } catch (err) {
@@ -53,7 +53,7 @@ const SignUpForm = () => {
   };
 
   return (
-    <div className="sign-up-container">
+    <SignUpContainer>
       <h2>Don't have an account</h2>
       <span>Sign Up with your email and password</span>
       <form onSubmit={handleSubmit}>
@@ -91,7 +91,7 @@ const SignUpForm = () => {
         />
         <Button type="submit">Sign up</Button>
       </form>
-    </div>
+    </SignUpContainer>
   );
 };
 

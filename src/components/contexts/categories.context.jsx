@@ -16,11 +16,11 @@ export const CategoriesProvider = ({ children }) => {
   useEffect(() => {
     const getCategoriesMap = async () => {
       const categoryMap = await getCategoriesAndDocuments();
-      console.log("categoruMap",categoryMap);
+
       setCategoriesMap(categoryMap);
     };
     getCategoriesMap();
-  },[]);
+  }, []);
 
   // useEffect(()=>{
   //     addCollectionAndDocuments('category',SHOP_DATA);

@@ -18,7 +18,6 @@ export const UserProvider = ({ children }) => {
         createUserDocumentFromAuth(user);
       }
       setCurrentUser(user);
-      console.log('contextusereffect', user);
     });
     return unsubcribe;
   }, []);
