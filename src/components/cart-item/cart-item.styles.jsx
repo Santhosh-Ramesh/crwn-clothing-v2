@@ -12,16 +12,14 @@ export const CartItemContainer = styled.div`
 `;
 
 export const ItemDetails = styled.div`
-  .item-details {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 10px 20px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px 20px;
 
-    span {
-      font-size: 16px;
-    }
+  span {
+    font-size: 16px;
   }
 `;
