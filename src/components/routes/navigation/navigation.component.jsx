@@ -1,5 +1,5 @@
-import { Outlet, Link } from 'react-router-dom';
-import { Fragment, useContext } from 'react';
+import { Outlet, Link, useNavigate } from 'react-router-dom';
+import { Fragment, useContext, useEffect } from 'react';
 import { ReactComponent as CrwnLogo } from './../../../assets/crown (1).svg';
 import { UserContext } from '../../contexts/user.context';
 //import './navigation.styles.jsx';
@@ -22,6 +22,7 @@ const Navigation = () => {
   //   };
 
   const { isCartOpen } = useContext(CartContext);
+
   return (
     <Fragment>
       <NavigationContainer>
