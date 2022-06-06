@@ -70,7 +70,6 @@ const CART_ACTION_TYPES = {
 };
 
 const cartReducer = (state, action) => {
-  console.log('action', action);
   const { type, payload } = action;
 
   switch (type) {
@@ -94,7 +93,7 @@ export const CartProvider = ({ children }) => {
 
   const { cartItems, cartCount, cartTotal, isCartOpen } = state;
 
-  console.log('cartItems veliya', cartItems, state);
+
   const updateCartItemsReducer = (newCartItems) => {
     const newCartCount = newCartItems.reduce(
       (total, cartItem) => total + cartItem.quantity,
@@ -114,7 +113,6 @@ export const CartProvider = ({ children }) => {
 
   const addItemToCart = (productToAdd) => {
     const newCartItems = addCartItem(cartItems, productToAdd);
-    console.log('newCartItems', newCartItems);
     updateCartItemsReducer(newCartItems);
   };
   const removeItemFromCart = (cartItemToRemove) => {
