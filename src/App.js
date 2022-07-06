@@ -1,9 +1,9 @@
-import Home from './components/routes/home/home.component.jsx';
+import Home from './routes/home/home.component.jsx';
 import { Routes, Route } from 'react-router-dom';
-import Navigation from './components/routes/navigation/navigation.component.jsx';
-import Authentication from './components/routes/authentication/authentication.component.jsx';
-import Shop from './components/routes/shop/shop.components.jsx';
-import Checkout from './components/routes/checkout/checkout.components.jsx';
+import Navigation from './routes/navigation/navigation.component.jsx';
+import Authentication from './routes/authentication/authentication.component.jsx';
+import Shop from './routes/shop/shop.components.jsx';
+import Checkout from './routes/checkout/checkout.components.jsx';
 import {
   onAuthStateChangedListener,
   createUserDocumentFromAuth,

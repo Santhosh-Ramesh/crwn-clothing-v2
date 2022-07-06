@@ -1,12 +1,12 @@
 import { Outlet, Link, useNavigate } from 'react-router-dom';
 import { Fragment, useEffect } from 'react';
-import { ReactComponent as CrwnLogo } from './../../../assets/crown (1).svg';
+import { ReactComponent as CrwnLogo } from '../../assets/crown (1).svg';
 
 //import './navigation.styles.jsx';
 
-import CartIcon from '../../cart-icon/cart-icon.components';
-import CartDropdown from './../../cart-dropdown/cart-dropdown.components';
-import { selectIsCartOpen } from '../../../store/cart/cart.selector';
+import CartIcon from '../../components/cart-icon/cart-icon.components';
+import CartDropdown from './../../components/cart-dropdown/cart-dropdown.components';
+import { selectIsCartOpen } from '../../store/cart/cart.selector';
 
 import {
   NavigationContainer,
@@ -16,8 +16,8 @@ import {
 } from './navigation.styles';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { selectCurrentUser } from '../../../store/user/user.selector';
-import { signOutStart } from '../../../store/user/user.action';
+import { selectCurrentUser } from '../../store/user/user.selector';
+import { signOutStart } from '../../store/user/user.action';
 
 
 

@@ -6,9 +6,9 @@ import { useState, useEffect, Fragment } from 'react';
 import {
   selectCategoriesMap,
   selectIsLoading,
-} from '../../../store/categories/categories.selector';
-import ProductCard from '../../product-card/product-card.components';
-import Spinner from '../../spinner/spinner.component';
+} from '../../store/categories/categories.selector';
+import ProductCard from '../../components/product-card/product-card.components';
+import Spinner from '../../components/spinner/spinner.component';
 const Category = () => {
   const { category } = useParams();
   const categoriesMap = useSelector(selectCategoriesMap);
