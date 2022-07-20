@@ -38,7 +38,7 @@ const Checkout = () => {
       {cartItems.map((cartItem) => {
         return <CheckoutItem key={cartItem.key} cartItem={cartItem} />;
       })}
-      <Total>Total: ₹{cartTotal}</Total>
+      <Total>Total: ${cartTotal}</Total>
       <PaymentForm/>
     </CheckoutContainer>
   );

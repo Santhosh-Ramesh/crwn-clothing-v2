@@ -37,14 +37,7 @@ const PaymentForm = () => {
       },
       body: JSON.stringify({
         amount: amount * 100,
-        description: 'payment',
-        address: {
-          city: 'Madurai',
-          country: 'India',
-          line1: '1/20 new add',
-          postal_code: '1234567',
-          state: 'tamilnadu',
-        }
+        description: 'payment'
       }),
     }).then((res) => {
       return res.json();
@@ -58,6 +51,13 @@ const PaymentForm = () => {
         card: elements.getElement(CardElement),
         billing_details: {
           name: currentUser ? currentUser.displayName : 'Guest',
+          address: {
+            line1: '510 Townsend St',
+            city: 'San Francisco',
+            country: 'US',
+            postal_code: '98140',
+            state: 'CA',
+          }
         },
       },
     });
